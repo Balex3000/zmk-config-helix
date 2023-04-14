@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-/* balex version 1.1 */
+/* balex version 1.2 with mo_tog macro */
 
  #include <behaviors.dtsi>
  #include <dt-bindings/zmk/keys.h>
@@ -48,7 +48,7 @@ As such, those are in use within the default layer at this time.*/
 //	LSHFT	Z	X	C	V	B	LEFT_BRACKET		RIGHT_BRACKET	N	M	COMMA	DOT	SLASH	RSHFT
 //	LCTRL	LWIN	tog 3	LALT	tog 2	ENTER	BACKSPACE		DEL	SPACE	mo 1	GRAVE	PSCRN	BACKSLASH	RCTRL
 
-                     // label = "Qwerty";
+                     label = "Qwerty";
                      bindings = <
 &kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5				&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp MINUS
 &kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp T				&kp Y	&kp U	&kp I	&kp O	&kp P	&kp EQUAL
@@ -66,7 +66,7 @@ As such, those are in use within the default layer at this time.*/
 //	TRANS	BT_CLR									C_PREV	C_VOL_DN	C_NEXT		TRANS
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS
 
-                     // label = "Func";
+                     label = "Func";
                      bindings = <
 &trans	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5				&kp F6	&kp F7	&kp F8	&kp F9	&kp F10	&trans
 &trans	&kp F11	&kp F12	&none	&none	&none				&none	&none	&none	&none	&kp C_PLAY_PAUSE	&trans
@@ -83,7 +83,7 @@ As such, those are in use within the default layer at this time.*/
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS					LEFT	DOWN	RIGHT		TRANS
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS	TRANS		TRANS	TRANS	TRANS	TRANS
 
-                    // label = "Navi";
+                    label = "Navi";
                      bindings = <
 &trans	&trans	&trans	&trans	&trans	&trans				&none	&kp INS	&kp HOME	&kp PG_UP	&none	&trans
 &trans	&trans	&trans	&trans	&trans	&trans				&none	&kp DEL	&kp END	&kp PG_DN	&none	&trans
@@ -100,7 +100,7 @@ As such, those are in use within the default layer at this time.*/
 //	TRANS										KP_N1	KP_N2	KP_N3	KP_DIVIDE	TRANS
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		KP_N0	TRANS		TRANS	KP_DOT	TRANS	TRANS
 
-                    // label = "NumPad";
+                     label = "NumPad";
                      bindings = <
 &trans	&none	&none	&none	&none	&none				&none	&none	&kp KP_MULTIPLY	&kp LPAR	&kp RPAR	&trans
 &trans	&none	&none	&none	&none	&none				&kp KP_MULTIPLY	&kp KP_N7	&kp KP_N8	&kp KP_N9	&none	&kp KP_PLUS

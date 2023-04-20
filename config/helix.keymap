@@ -50,11 +50,11 @@ As such, those are in use within the default layer at this time.*/
 
                      label = "Qwerty";
                      bindings = <
-&kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5				&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp MINUS
+&kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5				&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp BACKSLASH
 &kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp T				&kp Y	&kp U	&kp I	&kp O	&kp P	&kp EQUAL
 &kp CAPS	&kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J	&kp K	&kp L	&kp SEMICOLON	&kp APOSTROPHE
 &kp LSHFT	&kp Z	&kp X	&kp C	&kp V	&kp B	&kp LEFT_BRACKET		&kp RIGHT_BRACKET	&kp N	&kp M	&kp COMMA	&kp DOT	&kp SLASH	&kp RSHFT
-&kp LCTRL	&kp LWIN	&mo_tog 3 3	&kp LALT	&mo_tog 2 2	&kp ENTER	&kp BACKSPACE		&kp DEL	&kp SPACE	&mo 1	&kp GRAVE	&kp PSCRN	&kp BACKSLASH	&kp RCTRL
+&kp LCTRL	&kp LWIN	&mo_tog 3 3	&kp LALT	&mo_tog 2 2	&kp ENTER	&kp BACKSPACE		&kp DEL	&kp SPACE	&mo 1	&kp GRAVE	&kp PSCRN	&kp MINUS	&kp RCTRL
                      >;
               };
 

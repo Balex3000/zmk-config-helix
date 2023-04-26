@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-/* balex version 1.4 add language change key instead of square bracket and move square brackets to NUMPAD layers */
+/* balex version 1.2 with mo_tog macro */
 
  #include <behaviors.dtsi>
  #include <dt-bindings/zmk/keys.h>
@@ -42,18 +42,18 @@ As such, those are in use within the default layer at this time.*/
               compatible = "zmk,keymap";
               default_layer {
 
-//	ESC	N1	N2	N3	N4	N5				N6	N7	N8	N9	N0	BACKSLASH
+//	ESC	N1	N2	N3	N4	N5				N6	N7	N8	N9	N0	BACKSLASH     
 //	TAB	Q	W	E	R	T				Y	U	I	O	P	EQUAL
 //	CAPS	A	S	D	F	G				H	J	K	L	SEMICOLON	APOSTROPHE
-//	LSHFT	Z	X	C	V	B	LA(LSHFT)		LEFT_BRACKET	N	M	COMMA	DOT	SLASH	RSHFT
-//	LCTRL	LWIN	mo_tog 3 3	LALT	mo_tog 2 2	ENTER	BACKSPACE		DEL	SPACE	mo 1	GRAVE	PSCRN	MINUS	RCTRL
+//	LSHFT	Z	X	C	V	B	LEFT_BRACKET		RIGHT_BRACKET	N	M	COMMA	DOT	SLASH	RSHFT
+//	LCTRL	LWIN	tog 3	LALT	tog 2	ENTER	BACKSPACE		DEL	SPACE	mo 1	GRAVE	PSCRN	MINUS	RCTRL
 
                      label = "Qwerty";
                      bindings = <
 &kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5				&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp BACKSLASH
 &kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp T				&kp Y	&kp U	&kp I	&kp O	&kp P	&kp EQUAL
 &kp CAPS	&kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J	&kp K	&kp L	&kp SEMICOLON	&kp APOSTROPHE
-&kp LSHFT	&kp Z	&kp X	&kp C	&kp V	&kp B	&kp LA(LSHFT)		&kp LEFT_BRACKET	&kp N	&kp M	&kp COMMA	&kp DOT	&kp SLASH	&kp RSHFT
+&kp LSHFT	&kp Z	&kp X	&kp C	&kp V	&kp B	&kp LEFT_BRACKET		&kp RIGHT_BRACKET	&kp N	&kp M	&kp COMMA	&kp DOT	&kp SLASH	&kp RSHFT
 &kp LCTRL	&kp LWIN	&mo_tog 3 3	&kp LALT	&mo_tog 2 2	&kp ENTER	&kp BACKSPACE		&kp DEL	&kp SPACE	&mo 1	&kp GRAVE	&kp PSCRN	&kp MINUS	&kp RCTRL
                      >;
               };
@@ -95,17 +95,17 @@ As such, those are in use within the default layer at this time.*/
               adjust_layer {
 
 //	TRANS											KP_MULTIPLY	LPAR	RPAR	TRANS
-//	TRANS										KP_N7	KP_N8	KP_N9		KP_PLUS
+//	TRANS									KP_MULTIPLY	KP_N7	KP_N8	KP_N9		KP_PLUS
 //	TRANS										KP_N4	KP_N5	KP_N6	COLON	ENTER
-//	TRANS								LEFT_BRACKET	RIGHT_BRACKET	KP_N1	KP_N2	KP_N3	KP_DIVIDE	TRANS
-//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS	KP_N0		TRANS	KP_DOT	TRANS	TRANS
+//	TRANS										KP_N1	KP_N2	KP_N3	KP_DIVIDE	TRANS
+//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS  KP_N0		TRANS	KP_DOT	TRANS	TRANS
 
                      label = "NumPad";
                      bindings = <
 &trans	&none	&none	&none	&none	&none				&none	&none	&kp KP_MULTIPLY	&kp LPAR	&kp RPAR	&trans
-&trans	&none	&none	&none	&none	&none				&none	&kp KP_N7	&kp KP_N8	&kp KP_N9	&none	&kp KP_PLUS
+&trans	&none	&none	&none	&none	&none				&kp KP_MULTIPLY	&kp KP_N7	&kp KP_N8	&kp KP_N9	&none	&kp KP_PLUS
 &trans	&none	&none	&none	&none	&none				&none	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp COLON	&kp ENTER
-&trans	&none	&none	&none	&none	&none	&none		&kp LEFT_BRACKET	&kp RIGHT_BRACKET	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_DIVIDE	&trans
+&trans	&none	&none	&none	&none	&none	&none		&none	&none	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_DIVIDE	&trans
 &trans	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&kp KP_N0	&none	&trans	&kp KP_DOT	&trans	&trans
                      >;
               };

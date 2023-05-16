@@ -48,16 +48,16 @@ As such, those are in use within the default layer at this time.*/
 //	ESC	N1	N2	N3	N4	N5				N6	N7	N8	N9	N0	MINUS
 //	TAB	Q	W	E	R	T				Y	U	I	O	P	EQUAL
 //	CAPS	A	S	D	F	G				H	J	K	L	SEMICOLON	APOSTROPHE
-//	LSHFT	Z	X	mt LC(C) C	mt LC(V) V	B	LA(LSHFT)		LEFT_BRACKET	N	M	COMMA	DOT	SLASH	RSHFT
-//	LCTRL	LWIN	mo_tog 3 3	LALT	mo_tog 2 2	ENTER	BACKSPACE		DEL	SPACE	mo 1	LEFT	UP	DOWN	RIGHT
+//	LSHFT	Z	X	mt LC(C) C	mt LC(V) V	B	LA(LSHFT)		LEFT_BRACKET	N	M	COMMA	DOT	UP	RSHFT
+//	LCTRL	LWIN	mo_tog 3 3	LALT	mo_tog 2 2	ENTER	BACKSPACE		DEL	SPACE	mo 1	SLASH	LEFT	DOWN	RIGHT
 
                      label = "Qwerty";
                      bindings = <
 &kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5				&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp MINUS
 &kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp T				&kp Y	&kp U	&kp I	&kp O	&kp P	&kp EQUAL
 &kp CAPS	&kp A	&kp S	&kp D	&kp F	&kp G				&kp H	&kp J	&kp K	&kp L	&kp SEMICOLON	&kp APOSTROPHE
-&kp LSHFT	&kp Z	&kp X	&mt LC(C) C	&mt LC(V) V	&kp B	&kp LA(LSHFT)		&kp LEFT_BRACKET	&kp N	&kp M	&kp COMMA	&kp DOT	&kp SLASH	&kp RSHFT
-&kp LCTRL	&kp LWIN	&mo_tog 3 3	&kp LALT	&mo_tog 2 2	&kp ENTER	&kp BACKSPACE		&kp DEL	&kp SPACE	&mo 1	&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT
+&kp LSHFT	&kp Z	&kp X	&mt LC(C) C	&mt LC(V) V	&kp B	&kp LA(LSHFT)		&kp LEFT_BRACKET	&kp N	&kp M	&kp COMMA	&kp DOT	&kp UP	&kp RSHFT
+&kp LCTRL	&kp LWIN	&mo_tog 3 3	&kp LALT	&mo_tog 2 2	&kp ENTER	&kp BACKSPACE		&kp DEL	&kp SPACE	&mo 1	&kp SLASH	&kp LEFT	&kp DOWN	&kp RIGHT
                      >;
               };
 
@@ -83,16 +83,16 @@ As such, those are in use within the default layer at this time.*/
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS					INS	HOME	PG_UP		TRANS
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS					DEL	END	PG_DN		TRANS
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS						UP			TRANS
-//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS	TRANS	LEFT	DOWN	RIGHT	RCTRL	TRANS
-//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS	TRANS		TRANS	TRANS	TRANS	TRANS
+//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS	TRANS	LEFT	DOWN	RIGHT	TRANS	TRANS
+//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS	TRANS		TRANS	TRANS	TRANS	RCTRL
 
                     label = "Navi";
                      bindings = <
 &trans	&trans	&trans	&trans	&trans	&trans				&none	&kp INS	&kp HOME	&kp PG_UP	&none	&trans
 &trans	&trans	&trans	&trans	&trans	&trans				&none	&kp DEL	&kp END	&kp PG_DN	&none	&trans
 &trans	&trans	&trans	&trans	&trans	&trans				&none	&none	&kp UP	&none	&none	&trans
-&trans	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&trans	&kp LEFT	&kp DOWN	&kp RIGHT	&kp RCTRL	&trans
-&trans	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&trans	&none	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&trans	&kp LEFT	&kp DOWN	&kp RIGHT	&trans	&trans
+&trans	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&trans	&none	&trans	&trans	&trans	&kp RCTRL
                      >;
               };
               adjust_layer {
@@ -100,16 +100,16 @@ As such, those are in use within the default layer at this time.*/
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS					GRAVE	KP_MULTIPLY	LPAR	RPAR	TRANS
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS					KP_N7	KP_N8	KP_N9		KP_PLUS
 //	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS					KP_N4	KP_N5	KP_N6	COLON	ENTER
-//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		LEFT_BRACKET	RIGHT_BRACKET	KP_N1	KP_N2	KP_N3	KP_DIVIDE	TRANS
-//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS	KP_N0	KP_DOT	TRANS	TRANS	TRANS	TRANS
+//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		LEFT_BRACKET	RIGHT_BRACKET	KP_N1	KP_N2	KP_N3	TRANS	TRANS
+//	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS	TRANS		TRANS	KP_N0	KP_DOT	KP_DIVIDE	TRANS	TRANS	TRANS
 
                      label = "NumPad";
                      bindings = <
 &trans	&trans	&trans	&trans	&trans	&trans				&none	&kp GRAVE	&kp KP_MULTIPLY	&kp LPAR	&kp RPAR	&trans
 &trans	&trans	&trans	&trans	&trans	&trans				&none	&kp KP_N7	&kp KP_N8	&kp KP_N9	&none	&kp KP_PLUS
 &trans	&trans	&trans	&trans	&trans	&trans				&none	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp COLON	&kp ENTER
-&trans	&trans	&trans	&trans	&trans	&trans	&trans		&kp LEFT_BRACKET	&kp RIGHT_BRACKET	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_DIVIDE	&trans
-&trans	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&kp KP_N0	&kp KP_DOT	&trans	&trans	&trans	&trans
+&trans	&trans	&trans	&trans	&trans	&trans	&trans		&kp LEFT_BRACKET	&kp RIGHT_BRACKET	&kp KP_N1	&kp KP_N2	&kp KP_N3	&trans	&trans
+&trans	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&kp KP_N0	&kp KP_DOT	&kp KP_DIVIDE	&trans	&trans	&trans
                      >;
               };
        };
